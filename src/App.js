@@ -12,6 +12,7 @@ function App() {
     const getMyNfts = async () => {
       const openseaData = await axios.get('https://testnets-api.opensea.io/assets?asset_contract_address=0xcdc62958e328318925ed93D55498118DFf65CdF8&order_direction=asc')
 
+      console.log(openseaData.data.assets);
       setPunkListData(openseaData.data.assets);
     }
     return getMyNfts()
@@ -23,8 +24,6 @@ function App() {
     return( 
     <div className="app">
       <Header/>
-      <CollectionCard  id={0} name={'HeadBand Punk'} traits={[{'value' :7}]} image='https://ipfs.thirdweb.com/ipfs/QmZ5fD3UTRh8ALZCpMdypHkhMQSXyi4yyCz3Ea19kPmtXg/0.jpg' />
-
       <Punklist punkListData={punkListData} />
     </div>
     )

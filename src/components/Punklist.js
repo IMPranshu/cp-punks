@@ -1,5 +1,6 @@
 import React from 'react'
 import CollectionCard from './CollectionCard';
+import './Punklist.css'
 
 export const PunkList = ({punkListData}) => {
   return (
@@ -13,7 +14,7 @@ export const PunkList = ({punkListData}) => {
             id = {punk.token_id}
             name = {punk.name}
             traits = {punk.traits}
-            image = {punk.image_original_url}
+            image = {punk.image_url}
           
           />
           
