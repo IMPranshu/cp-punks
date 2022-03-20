@@ -16,6 +16,13 @@ export const Header = () => {
       </div>
       <input className='searchInput' placeholder='Collection, item or user...' />
     </div>
+
+    <div className='headerItems'>
+      <p>Drops</p>
+      <p>Marketplace</p>
+      <p>Create</p>
+
+    </div>
     </div>
   )
 }
