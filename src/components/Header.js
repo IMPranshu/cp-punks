@@ -1,7 +1,21 @@
-import React from 'react'
+import React from 'react';
+import './Header.css';
+import punkLogo from '../assets/header/cryptopunk-logo.png';
+import searchIcon from '..//assets//header/search.png';
 
 export const Header = () => {
   return (
-    <h2>I am the Header</h2>
+    <div className='header'>
+
+    <div className='logo-container'>
+      <img src={punkLogo} className='punkLogo' alt='' />
+    </div>
+    <div className='searchBar'>
+      <div className='searchIconContainer'>
+        <img src={searchIcon} />
+      </div>
+      <input className='searchInput' placeholder='Collection, item or user...' />
+    </div>
+    </div>
   )
 }
